@@ -77,10 +77,10 @@ void MapConvert (int &x, int &y, std::vector<std::vector<unsigned char>>& image)
 void NextFrame(int &x, int &y, Direction D, int& len,
     int *TailX, int *TailY, int sc, std::vector<std::vector<unsigned char>>& image)
 {
-    int prevX = TailX[1];
-    int prevY = TailY[1];
-    TailX[1] = x;
-    TailY[1] = y;
+    int prevX = TailX[0];
+    int prevY = TailY[0];
+    TailX[0] = x;
+    TailY[0] = y;
     for (int i = 1; i < len; i++)
     {
         int prev2X = TailX[i];
